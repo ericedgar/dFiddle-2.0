@@ -8,6 +8,13 @@
         displayName: 'What is your name?',
         composedViewMessage: 'Hello from composed view',
         name: name,
+        formMessage: "Hello from form",
+        composedViewMessage = "Hello from composed view";
+        formDivElement: null,
+        composedViewDivElement: null,
+        formDivFoundInAttachedMessage: "",
+        composedViewDivFoundInAttachedMessage: "",
+        composedViewDivFoundAfterTimeoutMessage: "",
         sayHello: function() {
             app.showMessage('Hello ' + name() + '!', 'Greetings');
         },
