@@ -6,10 +6,6 @@
         formDivFoundInAttachedMessage: "",
         composedViewDivFoundInAttachedMessage: "",
         composedViewDivFoundAfterTimeoutMessage: "",
-        sayHello: function() {
-            app.showMessage('Hello ' + name() + '!', 'Greetings');
-        },
-        canSayHello: canSayHello,
         activate: function() {
             system.log('Lifecycle : activate : hello');
         },
