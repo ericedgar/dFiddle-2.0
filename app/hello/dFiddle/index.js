@@ -1,9 +1,11 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
-     
+    var formDivFoundInAttachedMessage;
+    formDivFoundInAttachedMessage = "test";
+      
     return {
         composedViewMessage: 'Hello from composed view',
-        formMessage: "Hello from index",
-        formDivFoundInAttachedMessage: "",
+        formMessage: "Hello from form",
+        formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
         composedViewDivFoundInAttachedMessage: "",
         composedViewDivFoundAfterTimeoutMessage: "",
         activate: function() {
