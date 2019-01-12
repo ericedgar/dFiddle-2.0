@@ -1,10 +1,7 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
-    var formDivFoundInAttachedMessage;
-    formDivFoundInAttachedMessage = ko.observable("");
-    var composedViewDivFoundInAttachedMessage;
-    composedViewDivFoundInAttachedMessage = ko.observable("");
-    var composedViewDivFoundAfterCompositionCompleteMessage;
-    composedViewDivFoundAfterCompositionCompleteMessage = ko.observable("");
+    var formDivFoundInAttachedMessage = formDivFoundInAttachedMessage = ko.observable("");
+    var composedViewDivFoundInAttachedMessage = ko.observable("");
+    var composedViewDivFoundAfterCompositionCompleteMessage = ko.observable("");
       
     return {
         composedViewMessage: 'Hello from composed view',
