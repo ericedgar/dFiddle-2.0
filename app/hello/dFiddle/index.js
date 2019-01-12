@@ -2,14 +2,16 @@
     var formDivFoundInAttachedMessage;
     formDivFoundInAttachedMessage = ko.observable("");
     var composedViewDivFoundInAttachedMessage;
-    composedViewDivFoundInAttachedMessage = ko.observable("hay");
+    composedViewDivFoundInAttachedMessage = ko.observable("");
+    var composedViewDivFoundAfterTimeoutMessage;
+    composedViewDivFoundAfterTimeoutMessage = ko.observable("");
       
     return {
         composedViewMessage: 'Hello from composed view',
         formMessage: "Hello from form3",
         formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
         composedViewDivFoundInAttachedMessage: composedViewDivFoundInAttachedMessage,
-        composedViewDivFoundAfterTimeoutMessage: "",
+        composedViewDivFoundAfterTimeoutMessage: composedViewDivFoundAfterTimeoutMessage,
         activate: function() {
             system.log('Lifecycle : activate : hello');
         },
@@ -41,6 +43,13 @@
         },
         compositionComplete: function( view ) {
             system.log('Lifecycle : compositionComplete : hello');
+            var composedViewDivElement;
+            composedViewDivElement = document.getElementById("composedViewDivElement");
+            if (composedViewDivElement) {
+                this.composedViewDivFoundAfterTimeoutMessage("composed view FOUND in form attached");
+            } else {
+                this.composedViewDivFoundAfterTimeoutMessage("composed view NOT FOUND in form attached");
+            }
         },
         detached: function( view ) {
             system.log('Lifecycle : detached : hello');
