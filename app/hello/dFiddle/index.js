@@ -1,10 +1,10 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
     var formDivFoundInAttachedMessage;
-    formDivFoundInAttachedMessage = "test";
+    formDivFoundInAttachedMessage = ko.observable("");
       
     return {
         composedViewMessage: 'Hello from composed view',
-        formMessage: "Hello from form",
+        formMessage: "Hello from form1",
         formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
         composedViewDivFoundInAttachedMessage: "",
         composedViewDivFoundAfterTimeoutMessage: "",
@@ -29,9 +29,9 @@
             }
             
             if (formDivElement) {
-                this.formDivFoundInAttachedMessage = "form div FOUND in form attached";
+                this.formDivFoundInAttachedMessage("form div FOUND in form attached");
             } else {
-                this.formDivFoundInAttachedMessage = "form div NOT FOUND in form attached";
+                this.formDivFoundInAttachedMessage("form div NOT FOUND in form attached");
             }
         },
         compositionComplete: function( view ) {
