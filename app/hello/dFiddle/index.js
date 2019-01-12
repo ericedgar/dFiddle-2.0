@@ -3,8 +3,6 @@
     return {
         composedViewMessage: 'Hello from composed view',
         formMessage: "Hello from index",
-        formDivElement: null,
-        composedViewDivElement: null,
         formDivFoundInAttachedMessage: "",
         composedViewDivFoundInAttachedMessage: "",
         composedViewDivFoundAfterTimeoutMessage: "",
@@ -26,10 +24,16 @@
             system.log('Lifecycle : attached : hello');
             var formDivElement;
             formDivElement = document.getElementById("formDivElement");
-            if (formDivElement) {
-              this.formDivFoundInAttachedMessage = "form div FOUND in form attached";
+            if (this.formDivFoundInAttachedMessage) {
+               system.log('Lifecycle : attached : this.formDivFoundInAttachedMessage: ' + this.formDivFoundInAttachedMessage + ' : formDivElement: ' + formDivElement);
             } else {
-              this.formDivFoundInAttachedMessage = "form div NOT FOUND in form attached";
+                system.log('Lifecycle : attached : this.formDivFoundInAttachedMessage: IS NULL');
+            }
+            
+            if (formDivElement) {
+                this.formDivFoundInAttachedMessage = "form div FOUND in form attached";
+            } else {
+                this.formDivFoundInAttachedMessage = "form div NOT FOUND in form attached";
             }
         },
         compositionComplete: function( view ) {
