@@ -5,7 +5,7 @@
           route: 'hello'
       }).map([
           {route: ['', 'default'], moduleId: 'default/index', title: 'Hello World', type: 'intro', nav: true},
-          {route: 'dFiddle', moduleId: 'dFiddle/index', title: 'Hello World', type: 'fiddle', nav: true}
+          {route: 'dFiddle', moduleId: 'dFiddle/index', title: 'composed View', type: 'fiddle', nav: true}
       ]).buildNavigationModel();
       
     // .on is mixed in an not meant to be  chainable 
