@@ -9,3 +9,9 @@
         <button type="submit" class="btn" data-bind="click: sayHello, enable: canSayHello">Click Me</button>
     </fieldset>
 </form>
+<div id="formDivElement">
+  <span data-bind="text: formMessage"></span> <br />
+  <span data-bind="text: formDivFoundInAttachedMessage"></span> <br />
+  <span data-bind="text: composedViewDivFoundInAttachedMessage"></span><br />
+  <span data-bind="text: composedViewDivFoundAfterTimeoutMessage"></span>
+</div>
