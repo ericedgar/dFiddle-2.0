@@ -9,7 +9,7 @@
         composedViewMessage: 'Hello from composed view',
         name: name,
         formMessage: "Hello from form",
-        composedViewMessage = "Hello from composed view";
+        composedViewMessage = "Hello from composed view",
         formDivElement: null,
         composedViewDivElement: null,
         formDivFoundInAttachedMessage: "",
