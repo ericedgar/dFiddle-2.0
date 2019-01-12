@@ -1,14 +1,4 @@
-﻿<form class="form-inline">
-    <fieldset>
-        <section data-bind="compose: { view: 'composedView.html' }"></section>
-        <legend data-bind="html: displayName"></legend>
-        <label>Name</label>
-        HELLO8
-        
-        <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'"/>
-        <button type="submit" class="btn" data-bind="click: sayHello, enable: canSayHello">Click Me</button>
-    </fieldset>
-</form>
+<section data-bind="compose: { view: 'composedView.html' }"></section>
 <div id="formDivElement">
   <span data-bind="text: formMessage"></span> <br />
   <span data-bind="text: formDivFoundInAttachedMessage"></span> <br />
