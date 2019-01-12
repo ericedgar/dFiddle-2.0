@@ -5,7 +5,7 @@
       
     return {
         composedViewMessage: 'Hello from composed view',
-        formMessage: "Hello from form3",
+        formMessage: "Hello from form",
         formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
         composedViewDivFoundInAttachedMessage: composedViewDivFoundInAttachedMessage,
         composedViewDivFoundAfterCompositionCompleteMessage: composedViewDivFoundAfterCompositionCompleteMessage,
