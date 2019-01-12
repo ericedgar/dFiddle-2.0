@@ -2,11 +2,11 @@
     var formDivFoundInAttachedMessage;
     formDivFoundInAttachedMessage = ko.observable("");
     var composedViewDivFoundInAttachedMessage;
-    composedViewDivFoundInAttachedMessage = ko.observable("");
+    composedViewDivFoundInAttachedMessage = ko.observable("hay");
       
     return {
         composedViewMessage: 'Hello from composed view',
-        formMessage: "Hello from form2",
+        formMessage: "Hello from form3",
         formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
         composedViewDivFoundInAttachedMessage: composedViewDivFoundInAttachedMessage,
         composedViewDivFoundAfterTimeoutMessage: "",
@@ -34,9 +34,9 @@
             var composedViewDivElement;
             composedViewDivElement = document.getElementById("composedViewDivElement");
             if (composedViewDivElement) {
-                this.composedViewDivFoundInAttachedMessage = "composed view FOUND in form attached";
+                this.composedViewDivFoundInAttachedMessage("composed view FOUND in form attached");
             } else {
-                this.composedViewDivFoundInAttachedMessage = "composed view NOT FOUND in form attached";
+                this.composedViewDivFoundInAttachedMessage("composed view NOT FOUND in form attached");
             }
         },
         compositionComplete: function( view ) {
