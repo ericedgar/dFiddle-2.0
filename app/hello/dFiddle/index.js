@@ -1,12 +1,14 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
     var formDivFoundInAttachedMessage;
     formDivFoundInAttachedMessage = ko.observable("");
+    var composedViewDivFoundInAttachedMessage;
+    composedViewDivFoundInAttachedMessage = ko.observable("");
       
     return {
         composedViewMessage: 'Hello from composed view',
-        formMessage: "Hello from form1",
+        formMessage: "Hello from form2",
         formDivFoundInAttachedMessage: formDivFoundInAttachedMessage,
-        composedViewDivFoundInAttachedMessage: "",
+        composedViewDivFoundInAttachedMessage: composedViewDivFoundInAttachedMessage,
         composedViewDivFoundAfterTimeoutMessage: "",
         activate: function() {
             system.log('Lifecycle : activate : hello');
@@ -22,16 +24,19 @@
             system.log('Lifecycle : attached : hello');
             var formDivElement;
             formDivElement = document.getElementById("formDivElement");
-            if (this.formDivFoundInAttachedMessage) {
-               system.log('Lifecycle : attached : this.formDivFoundInAttachedMessage: ' + this.formDivFoundInAttachedMessage + ' : formDivElement: ' + formDivElement);
-            } else {
-                system.log('Lifecycle : attached : this.formDivFoundInAttachedMessage: IS NULL');
-            }
             
             if (formDivElement) {
                 this.formDivFoundInAttachedMessage("form div FOUND in form attached");
             } else {
                 this.formDivFoundInAttachedMessage("form div NOT FOUND in form attached");
+            }
+            
+            var composedViewDivElement;
+            composedViewDivElement = document.getElementById("composedViewDivElement");
+            if (composedViewDivElement) {
+                this.composedViewDivFoundInAttachedMessage = "composed view FOUND in form attached";
+            } else {
+                this.composedViewDivFoundInAttachedMessage = "composed view NOT FOUND in form attached";
             }
         },
         compositionComplete: function( view ) {
