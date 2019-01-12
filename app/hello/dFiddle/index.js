@@ -1,15 +1,8 @@
 ﻿define(['durandal/app', 'durandal/system', 'knockout'], function( app, system, ko ) {
-    var name = ko.observable();
-    var canSayHello = ko.computed(function() {
-        return name() ? true : false;
-    });
-
+     
     return {
-        displayName: 'What is your name?',
         composedViewMessage: 'Hello from composed view',
-        name: name,
-        formMessage: "Hello from form",
-        composedViewMessage: "Hello from composed view",
+        formMessage: "Hello from index",
         formDivElement: null,
         composedViewDivElement: null,
         formDivFoundInAttachedMessage: "",
@@ -31,6 +24,13 @@
         },
         attached: function( view, parent ) {
             system.log('Lifecycle : attached : hello');
+            var formDivElement;
+            formDivElement = document.getElementById("formDivElement");
+            if (formDivElement) {
+              this.formDivFoundInAttachedMessage = "form div FOUND in form attached";
+            } else {
+              this.formDivFoundInAttachedMessage = "form div NOT FOUND in form attached";
+            }
         },
         compositionComplete: function( view ) {
             system.log('Lifecycle : compositionComplete : hello');
