@@ -6,6 +6,7 @@
 
     return {
         displayName: 'What is your name?',
+        composedViewMessage: 'Hello from composed view',
         name: name,
         sayHello: function() {
             app.showMessage('Hello ' + name() + '!', 'Greetings');
